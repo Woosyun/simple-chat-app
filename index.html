@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>simple chat application</title>
+  <style>
+    body {
+      #message-container {
+        border: 1px black;
+        background-color: beige;
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="message-container">
+    <ul id="message-list"></ul>
+  </div>
+  
+  <form id="input-form">
+    <label for="message-input">Message</label>
+    <input type="text" id="message-input">
+    <button>Send</button>
+    
+    <label for="room-input">Room</label>
+    <input type="text" id="room-input">
+    <button type="button" id="room-button">Join</button>
+
+    <button type="button" id="leave-button">Leave</button>
+  </form>
+
+  <script type="module" src="client.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js" integrity="sha512-Xm9qbB6Pu06k3PUwPj785dyTl6oHxgsv9nHp7ej7nCpAqGZT3OZpsELuCYX05DdonFpTlBpXMOxjavIAIUwr0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
